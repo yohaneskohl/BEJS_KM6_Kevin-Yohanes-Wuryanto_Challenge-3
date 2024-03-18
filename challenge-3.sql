@@ -1,5 +1,5 @@
 
---create table bank account--
+--1. create table bank account--
 CREATE TABLE nasabah (
     id_nasabah BIGSERIAL PRIMARY KEY,
     nama VARCHAR(255) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE transaksi (
     id_akun INT NOT NULL
 );
 
---Insert data awal--
+--2. Insert data awal--
 -- Insert data into nasabah table
 INSERT INTO nasabah (nama, nama_ibu, alamat, KTP, kelamin) 
 VALUES 
@@ -54,7 +54,7 @@ VALUES
     ('2024-03-16', 'withdraw', 'Pembelian barang', 4),
     ('2024-03-17', 'deposit', 'Gaji masuk', 5);
 
---Insert Data Baru--
+--3. Insert Data Baru--
 -- Insert data into Nasabah table
 INSERT INTO nasabah (nama, nama_ibu, alamat, KTP, kelamin) 
 VALUES ('sabrina', 'Sobrono', 'Medan', '357006', 'wanita');
@@ -67,7 +67,7 @@ VALUES ('sabrina@gmail.com', 'sabrina123', 500000.00, 'R0006', 6);
 INSERT INTO transaksi (tanggal, jenis_transaksi, catatan, id_akun)
 VALUES ('2024-03-18', 'deposit', 'Deposito tambahan', 6);
 
---select table--
+--4. select table--
 -- Select all Nasabah
 SELECT * FROM nasabah;
 
@@ -77,18 +77,18 @@ SELECT * FROM akun;
 -- Select all Transaksi
 SELECT * FROM transaksi;
 
---update table--
+--5. update table--
 -- Update saldo in Akun table
 UPDATE akun 
-SET saldo = saldo + 500 
+SET saldo = saldo + 500000 
 WHERE no_rek = 'R0001';
 
 -- Update nama in Nasabah table
 UPDATE nasabah 
 SET alamat = 'Batam'
-WHERE nama = 'bunga';
+WHERE nama = 'kevin';
 
--- Delete --
+--6. Delete --
 -- Delete Nasabah with specific ID
 DELETE FROM nasabah WHERE id_nasabah = 6;
 
@@ -98,7 +98,7 @@ DELETE FROM akun WHERE id_akun = 6;
 -- Delete Transaksi with specific ID
 DELETE FROM transaksi WHERE id_transaksi = 6;
 
---gabungan--
+--7. gabungan--
 WITH akun_nasabah AS (
     SELECT akun.id_akun, akun.email, akun.saldo, nasabah.nama
     FROM akun
