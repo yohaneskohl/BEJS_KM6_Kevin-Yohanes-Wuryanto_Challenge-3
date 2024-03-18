@@ -19,5 +19,4 @@ The project aims to create a database system to manage customer information, acc
 - Akun (Account)
 - Transaksi (Transaction)
 
-This project is licensed under the [MIT License](link-to-your-license-file).
 
