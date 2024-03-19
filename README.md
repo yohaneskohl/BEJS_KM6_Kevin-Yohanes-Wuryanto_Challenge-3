@@ -1,4 +1,4 @@
-# Tugas Challenge 3 Bank Management System
+# Tugas Challenge 3 ERD Bank Management System
 
 This is a simple bank management system developed as a part of the Binar Academy Chapter 3 project.
 
