@@ -1,5 +1,6 @@
-
+-- Tugas Challenge 3 Bank Management System
 --1. create table bank account--
+--create table nasabah
 CREATE TABLE nasabah (
     id_nasabah BIGSERIAL PRIMARY KEY,
     nama VARCHAR(255) NOT NULL,
@@ -9,6 +10,7 @@ CREATE TABLE nasabah (
     kelamin VARCHAR(255) NOT NULL
 );
 
+--create table akun
 CREATE TABLE akun (
     id_akun BIGSERIAL PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
@@ -18,6 +20,7 @@ CREATE TABLE akun (
     id_nasabah INT NOT NULL
 );
 
+--create transaksi
 CREATE TABLE transaksi (
     id_transaksi BIGSERIAL PRIMARY KEY,
     tanggal DATE NOT NULL,
